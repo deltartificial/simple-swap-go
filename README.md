@@ -1,5 +1,4 @@
 # Simple Swap Go •
-
 ===================
 This project is a simple demonstration of a swap on Uniswap V2 (and all forks) using Golang. It does a simple swap using a smart-contract "SwapExecutor" developed in Vyper and Solidity.
 
