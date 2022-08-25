@@ -1,5 +1,5 @@
 # Simple Swap Go •
-This project is a simple demonstration of a swap on Uniswap V2 (and all forks) using Golang. It does a simple swap using a smart-contract "SwapExecutor" developed in Vyper and Solidity.
+This project is a demonstration of a swap on Uniswap V2 (and all forks) using Golang. It does a simple swap using a smart-contract "SwapExecutor" developed in Vyper and Solidity.
 
 ### Environment Variables
 
@@ -19,8 +19,8 @@ This project is a simple demonstration of a swap on Uniswap V2 (and all forks) u
 ### Setup 
 
 ```sh
-git clone https://github.com/deltartificial/simple-buy-go
-cd simple-buy-go
+git clone https://github.com/deltartificial/simple-swap-go
+cd simple-swap-go
 ```
 
 ### Usage
