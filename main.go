@@ -19,14 +19,14 @@ import (
 )
 
 var (
-    HTTP_RPC string = "https://bsc-dataseed.binance.org/" // http rpc
-    PRIVATE string = "" // private key of the account to use
-    CONTRACT_ADDRESS string = "" // address of the contract to use
-    GAS_LIMIT = 300000 // 300.000 gas
-    GAS_PRICE = 10// 10 gwei
-    TOKEN_IN string = "" // address of the token to swap in
-    TOKEN_OUT string= "" // address of the token to swap out
-    AMOUNT_IN = 100 // in wei
+	HTTP_RPC string = "https://bsc-dataseed.binance.org/" // http rpc
+	PRIVATE string = "" // private key of the account to use
+	CONTRACT_ADDRESS string = "" // address of the contract to use
+	GAS_LIMIT = 300000 // 300.000 gas
+	GAS_PRICE = 10// 10 gwei
+	TOKEN_IN string = "" // address of the token to swap in
+	TOKEN_OUT string= "" // address of the token to swap out
+	AMOUNT_IN = 100 // in wei
 	AMOUNT_OUT_MIN = 0 // in wei
 	TO string = CONTRACT_ADDRESS // address receiver
 	ROUTER string = "" // address of the router to use
@@ -58,7 +58,7 @@ func main() {
         log.Fatal(err, "could not get nonce")
     }
 
-	chainId := big.NewInt(CHAINID)
+    chainId := big.NewInt(CHAINID)
     auth, err := bind.NewKeyedTransactorWithChainID(privateKey, chainId)
 	if err != nil {
 		log.Fatal(err, "could not create auth")
@@ -78,10 +78,10 @@ func main() {
 
     tokenIn := common.HexToAddress(TOKEN_IN)
     tokenOut := common.HexToAddress(TOKEN_OUT)
-	amountIn := big.NewInt(int64(AMOUNT_IN))
-	amountOutMin := big.NewInt(int64(AMOUNT_OUT_MIN))
-	to := common.HexToAddress(TO)
-	router := common.HexToAddress(ROUTER)
+    amountIn := big.NewInt(int64(AMOUNT_IN))
+    amountOutMin := big.NewInt(int64(AMOUNT_OUT_MIN))
+    to := common.HexToAddress(TO)
+    router := common.HexToAddress(ROUTER)
 
     tx, err := instance.SwapTokensOnUniswapV2(auth, tokenIn, tokenOut, amountIn, amountOutMin, to, router)
     if err != nil {
